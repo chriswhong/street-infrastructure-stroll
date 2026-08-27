@@ -1,10 +1,12 @@
 # Vanderbilt Ave Street Infrastructure Stroll
 
-A static website version of Chris Whong's "Vanderbilt Ave Street Infrastructure Stroll" (17 July 2022) — a 26-stop field guide to everyday urban infrastructure along Vanderbilt Avenue in Prospect Heights, Brooklyn.
+**Live site: [chriswhong.github.io/street-infrastructure-stroll](https://chriswhong.github.io/street-infrastructure-stroll/)**
+
+In 2022, Chris Whong led a walking tour of street infrastructure along Vanderbilt Avenue in Prospect Heights, Brooklyn, during an Open Streets event. This repo is a web version of the PDF packet of visual aids handed out to attendees — a 26-stop field guide to the everyday urban infrastructure hiding in plain sight along the block, from fire hydrants and curb valves to utility vaults and antennas, each one photographed, numbered, and traced back to a source that explains what it actually is.
 
 ## What this is
 
-Plain HTML, CSS, and a few lines of vanilla JS (smooth-scroll table of contents, click-to-zoom lightbox). No build step, no framework, no dependencies — open `index.html` directly or drop the folder on any static host. This keeps it working indefinitely with zero maintenance.
+Plain HTML, CSS, and a few lines of vanilla JS (sticky "on this page" nav, click-to-zoom lightbox). No build step, no framework, no dependencies — open `index.html` directly or drop the folder on any static host. This keeps it working indefinitely with zero maintenance.
 
 ## Structure
 
