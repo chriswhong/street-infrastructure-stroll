@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanderbilt Ave Street Infrastructure Stroll</title>
+<meta name="description" content="A web version of the visual aid packet handed out on a 2022 Open Streets walking tour of street infrastructure along Vanderbilt Avenue in Prospect Heights, Brooklyn &mdash; fire hydrants, utility vaults, curb valves, antennas, and more, with photos and sources for every stop.">
+<meta name="author" content="Chris Whong">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vanderbilt Ave Street Infrastructure Stroll">
+<meta property="og:description" content="A web version of the visual aid packet from a 2022 Open Streets walking tour of street infrastructure along Vanderbilt Avenue in Prospect Heights, Brooklyn.">
+<meta property="og:image" content="images/stroll-map.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚧</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Vanderbilt Ave Street Infrastructure Stroll",
+  "description": "A field guide to everyday urban infrastructure along Vanderbilt Avenue in Prospect Heights, Brooklyn.",
+  "itemListElement": [
+{"@type":"ListItem","position":1,"name":'US Postal Service Arrow Lock'},
+{"@type":"ListItem","position":2,"name":'Groundwater Monitoring Well'},
+{"@type":"ListItem","position":3,"name":'Mobile Phone Antenna'},
+{"@type":"ListItem","position":4,"name":'Eruv'},
+{"@type":"ListItem","position":5,"name":'FDNY Emergency Call Box'},
+{"@type":"ListItem","position":6,"name":'Verizon FIOS FDH (Fiber Distribution Hub)'},
+{"@type":"ListItem","position":7,"name":'Boiler Fuel Oil Fill Pipe And Vent'},
+{"@type":"ListItem","position":8,"name":'Scancoder Water Meter Reader'},
+{"@type":"ListItem","position":9,"name":'Natural Gas Pressure Regulator Station'},
+{"@type":"ListItem","position":10,"name":'Building Intercom System'},
+{"@type":"ListItem","position":11,"name":'Wireless Automated Water Meter Reading Device (AMR)'},
+{"@type":"ListItem","position":12,"name":'Capital Project – Sewer Replacement'},
+{"@type":"ListItem","position":13,"name":'Fire Department Connection for Standpipe System'},
+{"@type":"ListItem","position":14,"name":'CableTV Distribution Vault'},
+{"@type":"ListItem","position":15,"name":'Fuel Tank Symbol'},
+{"@type":"ListItem","position":16,"name":'House Trap Vent Pipe'},
+{"@type":"ListItem","position":17,"name":'Fire Hydrant'},
+{"@type":"ListItem","position":18,"name":'Brooklyn Edison Company Vault'},
+{"@type":"ListItem","position":19,"name":'Hydrant With Security Nut'},
+{"@type":"ListItem","position":20,"name":'Traffic Control Box'},
+{"@type":"ListItem","position":21,"name":'CATV Vault'},
+{"@type":"ListItem","position":22,"name":'Fire Sprinkler Alarm Bell'},
+{"@type":"ListItem","position":23,"name":'Multiple CATV Wires Emerge from the Sidewalk'},
+{"@type":"ListItem","position":24,"name":'Cablevision Surface Boxes'},
+{"@type":"ListItem","position":25,"name":'Follow Orange Paint, Cables Emerge!'},
+{"@type":"ListItem","position":26,"name":'Building Cable Hoist'},
+{"@type":"ListItem","position":27,"name":'LinkNYC Fiber Run'},
+{"@type":"ListItem","position":28,"name":'New Building SD-1'}
+  ]
+}
+</script>
+<style>
+:root {
+  --bg: #faf8f5;
+  --surface: #ffffff;
+  --text: #22201d;
+  --text-muted: #6b665f;
+  --accent: #c1541f;
+  --border: #e4ded4;
+  --badge-bg: #22201d;
+  --badge-text: #faf8f5;
+  --focus: #1f6fb2;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17150f;
+    --surface: #211f19;
+    --text: #efe9df;
+    --text-muted: #a49c8e;
+    --accent: #e37f47;
+    --border: #38352c;
+    --badge-bg: #efe9df;
+    --badge-text: #17150f;
+    --focus: #6cb4f0;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.55;
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+img { max-width: 100%; display: block; height: auto; border-radius: 6px; }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+
+header.hero {
+  padding: 3.5rem 0 2rem;
+  border-bottom: 1px solid var(--border);
+}
+header.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 0.25rem;
+  line-height: 1.1;
+}
+header.hero .byline {
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+}
+header.hero p.lede {
+  max-width: 62ch;
+  font-size: 1.1rem;
+}
+
+.map-figure { margin: 1.75rem 0 0.5rem; }
+.map-figure img { border: 1px solid var(--border); }
+.map-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+nav.toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.5rem 0 0;
+}
+.toc-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.1rem;
+  height: 2.1rem;
+  padding: 0 0.4rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.toc-badge:hover, .toc-badge:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.sticky-toc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  white-space: nowrap;
+  transform: translateY(-100%);
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.sticky-toc.visible { transform: translateY(0); }
+.sticky-toc-label {
+  flex: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  padding-right: 0.35rem;
+  border-right: 1px solid var(--border);
+  margin-right: 0.15rem;
+}
+.sticky-toc .toc-badge.mini {
+  flex: none;
+  min-width: 1.85rem;
+  height: 1.85rem;
+  font-size: 0.78rem;
+}
+.sticky-toc .toc-badge.mini.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .sticky-toc-label { display: none; }
+}
+
+section.intro { padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
+section.intro h2 { font-family: var(--font-display); font-size: 1.5rem; margin-bottom: 0.25rem; }
+section.intro > p.section-note { color: var(--text-muted); margin-top: 0; }
+
+article.topic { margin-top: 2rem; }
+article.topic h3 { font-size: 1.15rem; margin-bottom: 0.75rem; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+  margin: 0.75rem 0;
+}
+.gallery.single { grid-template-columns: minmax(0, 480px); }
+.gallery a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 420px;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 0;
+  cursor: zoom-in;
+}
+
+main { padding-bottom: 3rem; }
+
+.stop {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 1rem;
+}
+.stop-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+.stop-num {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.6rem;
+  height: 2.6rem;
+  padding: 0 0.3rem;
+  border-radius: 999px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.stop-head h2 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  margin: 0;
+}
+.stop p { margin: 0.75rem 0; }
+.stop blockquote {
+  margin: 0.75rem 0;
+  padding: 0.25rem 1rem;
+  border-left: 3px solid var(--accent);
+  color: var(--text-muted);
+  font-style: italic;
+}
+.stop blockquote p { margin: 0.5rem 0; }
+p.no-photo { color: var(--text-muted); font-style: italic; }
+
+.sources-block { margin-top: 1rem; }
+.sources-block h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin: 0 0 0.4rem;
+}
+ul.sources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  font-size: 0.9rem;
+}
+ul.sources li::before { content: "\2192\0020"; color: var(--text-muted); }
+ul.sources li.credit { color: var(--text-muted); font-style: italic; }
+ul.sources li.credit::before { content: ""; }
+ul.sources a { word-break: break-word; }
+
+footer {
+  padding: 2.5rem 0 4rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+footer a { color: inherit; }
+
+.top-link {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border-radius: 999px;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.top-link.visible { opacity: 1; pointer-events: auto; }
+
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 2rem;
+  cursor: zoom-out;
+}
+#lightbox.open { display: flex; }
+#lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+</style>
+</head>
+<body>
+
+<nav class="sticky-toc" id="stickyToc" aria-label="On this page">
+  <span class="sticky-toc-label">On this page</span>
+  <a class="toc-badge mini" href="#stop-1" data-anchor="stop-1"><span>1</span></a><a class="toc-badge mini" href="#stop-2" data-anchor="stop-2"><span>2</span></a><a class="toc-badge mini" href="#stop-2_5" data-anchor="stop-2_5"><span>2.5</span></a><a class="toc-badge mini" href="#stop-3" data-anchor="stop-3"><span>3</span></a><a class="toc-badge mini" href="#stop-4" data-anchor="stop-4"><span>4</span></a><a class="toc-badge mini" href="#stop-5" data-anchor="stop-5"><span>5</span></a><a class="toc-badge mini" href="#stop-6" data-anchor="stop-6"><span>6</span></a><a class="toc-badge mini" href="#stop-7" data-anchor="stop-7"><span>7</span></a><a class="toc-badge mini" href="#stop-8" data-anchor="stop-8"><span>8</span></a><a class="toc-badge mini" href="#stop-9" data-anchor="stop-9"><span>9</span></a><a class="toc-badge mini" href="#stop-10" data-anchor="stop-10"><span>10</span></a><a class="toc-badge mini" href="#stop-10_5" data-anchor="stop-10_5"><span>10.5</span></a><a class="toc-badge mini" href="#stop-11" data-anchor="stop-11"><span>11</span></a><a class="toc-badge mini" href="#stop-12" data-anchor="stop-12"><span>12</span></a><a class="toc-badge mini" href="#stop-13" data-anchor="stop-13"><span>13</span></a><a class="toc-badge mini" href="#stop-14" data-anchor="stop-14"><span>14</span></a><a class="toc-badge mini" href="#stop-15" data-anchor="stop-15"><span>15</span></a><a class="toc-badge mini" href="#stop-16" data-anchor="stop-16"><span>16</span></a><a class="toc-badge mini" href="#stop-17" data-anchor="stop-17"><span>17</span></a><a class="toc-badge mini" href="#stop-18" data-anchor="stop-18"><span>18</span></a><a class="toc-badge mini" href="#stop-19" data-anchor="stop-19"><span>19</span></a><a class="toc-badge mini" href="#stop-20" data-anchor="stop-20"><span>20</span></a><a class="toc-badge mini" href="#stop-21" data-anchor="stop-21"><span>21</span></a><a class="toc-badge mini" href="#stop-22" data-anchor="stop-22"><span>22</span></a><a class="toc-badge mini" href="#stop-23" data-anchor="stop-23"><span>23</span></a><a class="toc-badge mini" href="#stop-24" data-anchor="stop-24"><span>24</span></a><a class="toc-badge mini" href="#stop-25" data-anchor="stop-25"><span>25</span></a><a class="toc-badge mini" href="#stop-26" data-anchor="stop-26"><span>26</span></a>
+</nav>
+
+<div class="wrap">
+  <header class="hero">
+    <h1>Vanderbilt Ave Street Infrastructure Stroll</h1>
+    <p class="byline">Chris Whong &middot; 17 July 2022</p>
+    <p class="lede">In 2022, I led a walking tour of street infrastructure along Vanderbilt Avenue in Prospect Heights, Brooklyn during an Open Streets event. This site is a web version of the PDF packet of visual aids I handed out to attendees &mdash; utility vaults, curb valves, antennas, hydrants, and stranger things, each one photographed, numbered, and traced back to a source that explains what it actually is.</p>
+    <figure class="map-figure">
+      <img src="images/stroll-map.jpg" alt="Map of Vanderbilt Avenue from Pacific Street to Sterling Place with 26 numbered infrastructure stops marked along the block.">
+      <figcaption>The 26 numbered stops, from Pacific Street to Sterling Place. Tap a number below to jump to it.</figcaption>
+    </figure>
+    <nav class="toc" aria-label="Jump to a stop"><a class="toc-badge" href="#stop-1"><span>1</span></a><a class="toc-badge" href="#stop-2"><span>2</span></a><a class="toc-badge" href="#stop-2_5"><span>2.5</span></a><a class="toc-badge" href="#stop-3"><span>3</span></a><a class="toc-badge" href="#stop-4"><span>4</span></a><a class="toc-badge" href="#stop-5"><span>5</span></a><a class="toc-badge" href="#stop-6"><span>6</span></a><a class="toc-badge" href="#stop-7"><span>7</span></a><a class="toc-badge" href="#stop-8"><span>8</span></a><a class="toc-badge" href="#stop-9"><span>9</span></a><a class="toc-badge" href="#stop-10"><span>10</span></a><a class="toc-badge" href="#stop-10_5"><span>10.5</span></a><a class="toc-badge" href="#stop-11"><span>11</span></a><a class="toc-badge" href="#stop-12"><span>12</span></a><a class="toc-badge" href="#stop-13"><span>13</span></a><a class="toc-badge" href="#stop-14"><span>14</span></a><a class="toc-badge" href="#stop-15"><span>15</span></a><a class="toc-badge" href="#stop-16"><span>16</span></a><a class="toc-badge" href="#stop-17"><span>17</span></a><a class="toc-badge" href="#stop-18"><span>18</span></a><a class="toc-badge" href="#stop-19"><span>19</span></a><a class="toc-badge" href="#stop-20"><span>20</span></a><a class="toc-badge" href="#stop-21"><span>21</span></a><a class="toc-badge" href="#stop-22"><span>22</span></a><a class="toc-badge" href="#stop-23"><span>23</span></a><a class="toc-badge" href="#stop-24"><span>24</span></a><a class="toc-badge" href="#stop-25"><span>25</span></a><a class="toc-badge" href="#stop-26"><span>26</span></a></nav>
+  </header>
+
+  <section class="intro">
+    <h2>Before You Go</h2>
+    <p class="section-note">A couple of ubiquitous street features worth knowing before starting the stroll.</p>
+    
+    <article class="topic">
+      <h3>Utility Marking Colors</h3>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/intro-marking-colors-1.jpg"><img src="images/intro-marking-colors-1.jpg" alt="Utility Marking Colors" loading="lazy"></a></div>
+      <p>Utility markings are a common sight, and most of the time the companies that mark utility locations with paint follow a shared color code. You'll see a lot of orange, red, and yellow for telecom, electrical, and gas lines in the streets and sidewalks &mdash; it's a lot of fun to follow the paint and see how things connect. Keep an eye out for white, which usually shows up where a tree bed is being expanded and a section of sidewalk will be removed. Water and sewer lines are everywhere underground, but it's less common to see them marked.</p>
+      <ul class="sources"><li><a href="https://99percentinvisible.org/article/colorful-language-decoding-utility-markings-spray-painted-on-city-streets/" target="_blank" rel="noopener noreferrer">99percentinvisible.org</a></li></ul>
+    </article>
+    <article class="topic">
+      <h3>Curb Stops / Curb Valves</h3>
+      <div class="gallery"><a class="lightbox-trigger" href="images/intro-curb-stop-1.jpg"><img src="images/intro-curb-stop-1.jpg" alt="Curb Stops / Curb Valves" loading="lazy"></a><a class="lightbox-trigger" href="images/intro-curb-stop-2.jpg"><img src="images/intro-curb-stop-2.jpg" alt="Curb Stops / Curb Valves" loading="lazy"></a><a class="lightbox-trigger" href="images/intro-curb-stop-3.jpg"><img src="images/intro-curb-stop-3.jpg" alt="Curb Stops / Curb Valves" loading="lazy"></a><a class="lightbox-trigger" href="images/intro-curb-stop-4.jpg"><img src="images/intro-curb-stop-4.jpg" alt="Curb Stops / Curb Valves" loading="lazy"></a></div>
+      <p>Water and gas lines running from a main into a building usually have a curb stop &mdash; a valve accessible from a small port in the sidewalk. You'll often see utility markings on either side (blue and yellow), letting you trace the underground pipe's path from the street to the building. Operating a curb valve usually takes a "curb key," a long wrench with a head that matches the valve; the brass valve pictured here only needs a quarter turn to open or close. Water and gas mains also have valves to isolate sections of the system, accessible from a valve box. The gate valve shown in red is for water mains and requires several full turns to open or close.</p>
+
+      <ul class="sources"><li><a href="https://mvlspotlight.wordpress.com/2013/02/09/learn-the-lingo-curb-stop-box/#jp-carousel-120" target="_blank" rel="noopener noreferrer">mvlspotlight.wordpress.com</a></li><li><a href="https://www.balkanplumbing.com/curb-stop-valve-nyc-requirement/" target="_blank" rel="noopener noreferrer">balkanplumbing.com</a></li></ul>
+    </article>
+  </section>
+
+  <main>
+    
+    <section class="stop" id="stop-1">
+      <div class="stop-head">
+        <span class="stop-num">1</span>
+        <h2>US Postal Service Arrow Lock</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/01-arrow-lock.jpg"><img src="images/01-arrow-lock.jpg" alt="US Postal Service Arrow Lock" loading="lazy"></a></div>
+      <p>Postal workers need access to every building on their route to deliver mail, and most multifamily buildings use an arrow lock to provide it. Every arrow lock in an area is keyed the same, which is why you'll often see postal workers with an arrow key chained to their belt &mdash; one key opens every arrow lock they'll encounter that day.</p>
+      <p>Turning the key slides a metal bar back and forth inside the lock. Smaller buildings may use an arrow lock to secure a small key box holding another key that unlocks the entry door. Other setups wire the lock to an electric switch that triggers an electric door strike &mdash; the same mechanism used to "buzz in" visitors. You'll also find arrow locks on multi-unit mailboxes themselves, letting the postal worker open every mailbox at once to deliver the mail.</p>
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://en.wikipedia.org/wiki/Arrow_lock" target="_blank" rel="noopener noreferrer">en.wikipedia.org</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-2">
+      <div class="stop-head">
+        <span class="stop-num">2</span>
+        <h2>Groundwater Monitoring Well</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/02-groundwater-well-1.jpg"><img src="images/02-groundwater-well-1.jpg" alt="Groundwater Monitoring Well" loading="lazy"></a><a class="lightbox-trigger" href="images/02-groundwater-well-2.jpg"><img src="images/02-groundwater-well-2.jpg" alt="Groundwater Monitoring Well" loading="lazy"></a></div>
+      <p>As the name suggests, these are just long tubes that extend down to the water table, letting environmental consulting firms and government agencies monitor water quality below the surface. They're typically installed near current or former industrial sites, gas stations, and dry cleaners to check for contamination from things like petroleum products, solvents, and heavy metals leaching into the groundwater.</p>
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li class="credit">Photo by Chris Whong</li><li><a href="https://epd.georgia.gov/sites/epd.georgia.gov/files/related_files/site_page/MWdiagram.pdf" target="_blank" rel="noopener noreferrer">epd.georgia.gov</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-2_5">
+      <div class="stop-head">
+        <span class="stop-num">2.5</span>
+        <h2>Mobile Phone Antenna</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/02_5-antenna.jpg"><img src="images/02_5-antenna.jpg" alt="Mobile Phone Antenna" loading="lazy"></a></div>
+      <blockquote><p>Technicians have been installing gray boxes on light poles and street signs throughout the neighborhood in recent weeks, raising the obvious question: “What are they?”</p><p>Luckily, one of our tipsters asked a technician, who said they’re antennas for cell service. The city rents space on the light poles to telecom companies that install the antennas to improve service. They rent for as much as $400 a month, according to Crain’s.</p></blockquote>
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.westsiderag.com/2017/09/25/gray-boxes-being-attached-to-light-poles-are-boring-but-valuable" target="_blank" rel="noopener noreferrer">westsiderag.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-3">
+      <div class="stop-head">
+        <span class="stop-num">3</span>
+        <h2>Eruv</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/03-eruv-1.jpg"><img src="images/03-eruv-1.jpg" alt="Eruv" loading="lazy"></a><a class="lightbox-trigger" href="images/03-eruv-2.jpg"><img src="images/03-eruv-2.jpg" alt="Eruv" loading="lazy"></a></div>
+      <p>The thin wire you see running between the lampposts is part of an eruv, a ritual enclosure that allows Orthodox Jews to carry objects outdoors during the Sabbath.</p>
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.brownstoner.com/brooklyn-life/eruv-brooklyn-orthodox-jewish-shabbas-williamsburg-boro-park/" target="_blank" rel="noopener noreferrer">brownstoner.com</a></li><li><a href="https://www.brooklynpaper.com/neighborhood-dis-cord-spat-over-crown-heights-eruv-spills-into-park-slope/" target="_blank" rel="noopener noreferrer">brooklynpaper.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-4">
+      <div class="stop-head">
+        <span class="stop-num">4</span>
+        <h2>FDNY Emergency Call Box</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/04-callbox-1.jpg"><img src="images/04-callbox-1.jpg" alt="FDNY Emergency Call Box" loading="lazy"></a><a class="lightbox-trigger" href="images/04-callbox-2.jpg"><img src="images/04-callbox-2.jpg" alt="FDNY Emergency Call Box" loading="lazy"></a></div>
+      <p>These fire and police call boxes are all hard-wired and still operational, though most of the alarms they receive these days turn out to be false.</p>
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://untappedcities.com/2013/10/16/cities-101-red-fire-alarm-boxes-nyc-do-they-work/" target="_blank" rel="noopener noreferrer">untappedcities.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-5">
+      <div class="stop-head">
+        <span class="stop-num">5</span>
+        <h2>Verizon FIOS FDH (Fiber Distribution Hub)</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/05-fios-fdh-1.jpg"><img src="images/05-fios-fdh-1.jpg" alt="Verizon FIOS FDH (Fiber Distribution Hub)" loading="lazy"></a><a class="lightbox-trigger" href="images/05-fios-fdh-2.jpg"><img src="images/05-fios-fdh-2.jpg" alt="Verizon FIOS FDH (Fiber Distribution Hub)" loading="lazy"></a></div>
+      <p>These FIOS distribution hubs are splitters, where a single feeder line branches out to serve several dozen FIOS customers. You may see one mounted over a panel in the sidewalk, with all its cables hidden underground, or mounted on a pole, in which case you'll see cables emerging from conduits at ground level or running overhead to nearby buildings.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://ecatalog.corning.com/optical-communications/US/en/Fiber-Optic-Hardware/Cabinets/GEN-III-Series-Outdoor-Cabinets/p/SAPP431C41A31Q4S00?clear=true" target="_blank" rel="noopener noreferrer">ecatalog.corning.com</a></li><li><a href="https://www.facebook.com/debasis1402/photos/fttp-bpon-architecture-here-is-the-architecture-being-used-by-verizon-for-triple/1048680308555420/" target="_blank" rel="noopener noreferrer">facebook.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-6">
+      <div class="stop-head">
+        <span class="stop-num">6</span>
+        <h2>Boiler Fuel Oil Fill Pipe And Vent</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/06-boiler-vent.jpg"><img src="images/06-boiler-vent.jpg" alt="Boiler Fuel Oil Fill Pipe And Vent" loading="lazy"></a></div>
+      <p>Many buildings heat with boilers that run on fuel oil stored on site in a tank, replenished by periodic deliveries from a fuel tanker truck. You'll sometimes see a fill port for the tank built into the sidewalk, or set into the face of a building, and wherever there's a fill port, there's always a vent pipe nearby. Some vents are fitted with passive alarms that "whistle" when the tank is nearly full, so the person pumping the oil knows when to stop. More sophisticated setups use an electronic alarm instead, and you'll see a box with lights and a siren mounted near the fill port.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.smartoilgauge.com/support/public/articles/how-an-oil-tank-works/16" target="_blank" rel="noopener noreferrer">smartoilgauge.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-7">
+      <div class="stop-head">
+        <span class="stop-num">7</span>
+        <h2>Scancoder Water Meter Reader</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/07-scancoder-1.jpg"><img src="images/07-scancoder-1.jpg" alt="Scancoder Water Meter Reader" loading="lazy"></a><a class="lightbox-trigger" href="images/07-scancoder-2.jpg"><img src="images/07-scancoder-2.jpg" alt="Scancoder Water Meter Reader" loading="lazy"></a><a class="lightbox-trigger" href="images/07-scancoder-3.jpg"><img src="images/07-scancoder-3.jpg" alt="Scancoder Water Meter Reader" loading="lazy"></a></div>
+      <p>A building's domestic water meter uses a gray rectangular box to transmit usage data by radio signal, but you'll often find these black meter-reading devices nearby too. They belong to separate meters, usually connected to other water-consuming systems like fire sprinklers. They don't emit radio waves &mdash; instead, they're read by holding a special tool up to the round nub on the panel. I've never actually seen one read in the wild, and I have no idea how often it happens or what's done with the information.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.redbankgreen.com/2015/05/red-bank-water-meters-to-go-wireless/" target="_blank" rel="noopener noreferrer">redbankgreen.com</a></li><li><a href="https://scadametrics.com/blog/?p=160" target="_blank" rel="noopener noreferrer">scadametrics.com</a></li><li><a href="https://utility-technologies.myshopify.com/collections/remote-meter-reading/touchpad-reader" target="_blank" rel="noopener noreferrer">utility-technologies.myshopify.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-8">
+      <div class="stop-head">
+        <span class="stop-num">8</span>
+        <h2>Natural Gas Pressure Regulator Station</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/08-gas-regulator-1.jpg"><img src="images/08-gas-regulator-1.jpg" alt="Natural Gas Pressure Regulator Station" loading="lazy"></a><a class="lightbox-trigger" href="images/08-gas-regulator-2.jpg"><img src="images/08-gas-regulator-2.jpg" alt="Natural Gas Pressure Regulator Station" loading="lazy"></a></div>
+      <p>These gas pressure regulator stations are often flanked by a cluster of gas-related valves and manholes. Their job is to step down pressure between the larger mains that supply an area and the lower-pressure lines that feed individual buildings.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.coned.com/-/media/files/coned/documents/safety/safety/gas-safety/call-before-you-dig/excavation-safety.pdf" target="_blank" rel="noopener noreferrer">coned.com</a></li><li><a href="https://kcc.ks.gov/images/PDFs/pipeline/2012-seminar/pressure_regulator_station_maintenance_derossett_company.pdf" target="_blank" rel="noopener noreferrer">kcc.ks.gov</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-9">
+      <div class="stop-head">
+        <span class="stop-num">9</span>
+        <h2>Building Intercom System</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/09-intercom.jpg"><img src="images/09-intercom.jpg" alt="Building Intercom System" loading="lazy"></a></div>
+      <p>Here's a wiring diagram for the classic apartment intercom system. All the wires lead to the amplifier, a small box that handles the audio and can trigger an electric door release when a resident presses the right button inside their unit. These systems are inexpensive to install and maintain, but many buildings have since upgraded to video intercoms, or even smart intercoms that need no wiring to the unit at all and notify residents through their phone.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.tektone.com/pdf_files/manuals/IL826_PK543A_install.pdf" target="_blank" rel="noopener noreferrer">tektone.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-10">
+      <div class="stop-head">
+        <span class="stop-num">10</span>
+        <h2>Wireless Automated Water Meter Reading Device (AMR)</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/10-amr-1.jpg"><img src="images/10-amr-1.jpg" alt="Wireless Automated Water Meter Reading Device (AMR)" loading="lazy"></a><a class="lightbox-trigger" href="images/10-amr-2.jpg"><img src="images/10-amr-2.jpg" alt="Wireless Automated Water Meter Reading Device (AMR)" loading="lazy"></a></div>
+      <p>You'll find one of these gray boxes on every building with a water meter that gets billed. They transmit readings wirelessly, and you'll sometimes spot DEP vehicles with antennas mounted on the roof driving the neighborhood to collect them.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.aclara.com/products-and-services/communications-networks/aclara-rf-water-gas/AclaraRF-3400-water-mtu/" target="_blank" rel="noopener noreferrer">aclara.com</a></li><li><a href="https://comptroller.nyc.gov/wp-content/uploads/documents/7A13_060.pdf" target="_blank" rel="noopener noreferrer">comptroller.nyc.gov</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-10_5">
+      <div class="stop-head">
+        <span class="stop-num">10.5</span>
+        <h2>Capital Project – Sewer Replacement</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/10_5-sewer-1.jpg"><img src="images/10_5-sewer-1.jpg" alt="Capital Project – Sewer Replacement" loading="lazy"></a><a class="lightbox-trigger" href="images/10_5-sewer-2.jpg"><img src="images/10_5-sewer-2.jpg" alt="Capital Project – Sewer Replacement" loading="lazy"></a></div>
+      <p>The city's capital budget funds a lot of infrastructure work like this. You may notice a sign posted nearby with a capital project ID on it, and if you look that ID up, city data sources hold a wealth of information about how the project is funded and how it's progressing.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://databook.wegov.nyc/p/SEK002386_replace-combined-sewer-wm-workpark-pl-underhill-ave-bk" target="_blank" rel="noopener noreferrer">databook.wegov.nyc</a></li><li><a href="https://www.ppuaba.org/water-and-sewer-project/" target="_blank" rel="noopener noreferrer">ppuaba.org</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-11">
+      <div class="stop-head">
+        <span class="stop-num">11</span>
+        <h2>Fire Department Connection for Standpipe System</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/11-fdc-1.jpg"><img src="images/11-fdc-1.jpg" alt="Fire Department Connection for Standpipe System" loading="lazy"></a><a class="lightbox-trigger" href="images/11-fdc-2.jpg"><img src="images/11-fdc-2.jpg" alt="Fire Department Connection for Standpipe System" loading="lazy"></a></div>
+      <p>When you see these pipe connections on the front of a building, they're for pumping water in, not getting water out. They connect to fire sprinkler systems, standpipes, or sometimes both, and the caps are required to be painted to show which: green for sprinklers, red for standpipes, and yellow for both.</p>
+      <p>Under normal conditions, the building's existing water pressure is enough to supply its sprinklers, but the FDC lets a fire truck add extra pressure when it's needed. It's also possible for the valve supplying a sprinkler system to be closed off, so the FDC is always connected directly to the sprinkler piping, bypassing that valve entirely.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://blog.qrfs.com/80-guide-to-check-valves-for-fire-protection/" target="_blank" rel="noopener noreferrer">blog.qrfs.com</a></li><li><a href="https://www.nfpa.org/News-and-Research/Publications-and-media/Blogs-Landing-Page/Topic?tagId=2d4a4779-8724-4412-b7fd-a426491f396a&amp;page=5" target="_blank" rel="noopener noreferrer">nfpa.org</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-12">
+      <div class="stop-head">
+        <span class="stop-num">12</span>
+        <h2>CableTV Distribution Vault</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/12-catv-vault.jpg"><img src="images/12-catv-vault.jpg" alt="CableTV Distribution Vault" loading="lazy"></a></div>
+      <p>You usually only see the lid of one of these on the sidewalk, so here's a diagram showing the size of the vault hidden beneath it.</p>
+      <p>These vaults usually contain splitters that take a main cable signal and send it out to several buildings. Keep an eye out for orange pavement markings showing the conduits that feed the box.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="http://www.newbasis.com/product/fca101512t/" target="_blank" rel="noopener noreferrer">newbasis.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-13">
+      <div class="stop-head">
+        <span class="stop-num">13</span>
+        <h2>Fuel Tank Symbol</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/13-fuel-symbol.jpg"><img src="images/13-fuel-symbol.jpg" alt="Fuel Tank Symbol" loading="lazy"></a></div>
+      <p>On most buildings that fuel a boiler, you'll see the green hexagon for #2 fuel oil. You'll sometimes spot the diesel symbol instead on tanks in front of fire stations or other sites that keep a backup electrical generator on hand.</p>
+      <blockquote><p>“The API color coding system is the national and universal standard for properly identifying aboveground and underground fuel storage tanks, fills, piping, equipment and vehicles at gas stations, service stations, warehouses and distribution terminals.</p><p>API labeling is also a necessary component of fire codes within many municipalities. Fill pipes at various sites must be painted accordingly with a corresponding color or have external labels affixed in order to properly represent the product housed within.”</p></blockquote>
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.sclubricants.com/api-color-coding/" target="_blank" rel="noopener noreferrer">sclubricants.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-14">
+      <div class="stop-head">
+        <span class="stop-num">14</span>
+        <h2>House Trap Vent Pipe</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/14-house-trap-1.jpg"><img src="images/14-house-trap-1.jpg" alt="House Trap Vent Pipe" loading="lazy"></a><a class="lightbox-trigger" href="images/14-house-trap-2.jpg"><img src="images/14-house-trap-2.jpg" alt="House Trap Vent Pipe" loading="lazy"></a></div>
+      <p>On older buildings, you may see a pipe rising out of the sidewalk with a bend on top, open to the air but pointing back down toward the ground. This is the vent and cleanout for a "house trap." It works the same way as the P-trap under your sink, just for the entire building. In modern buildings, the trap is located inside and vented through the front face of the building instead.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.plbg.com/forum/read.php?1,661989,661999" target="_blank" rel="noopener noreferrer">plbg.com</a></li><li><a href="https://www.doityourself.com/forum/plumbing-piping/546941-two-gooseneck-vents-pipes-front-house-master-drain.html" target="_blank" rel="noopener noreferrer">doityourself.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-15">
+      <div class="stop-head">
+        <span class="stop-num">15</span>
+        <h2>Fire Hydrant</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/15-hydrant-1.jpg"><img src="images/15-hydrant-1.jpg" alt="Fire Hydrant" loading="lazy"></a><a class="lightbox-trigger" href="images/15-hydrant-2.jpg"><img src="images/15-hydrant-2.jpg" alt="Fire Hydrant" loading="lazy"></a></div>
+      <p>Every fire hydrant has its own shutoff valve, which can be a good clue to where the main feeding it actually sits. Look nearby for a small square panel marked WSNY.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.meyerfire.com/blog/breaking-down-components-of-a-fire-hydrant" target="_blank" rel="noopener noreferrer">meyerfire.com</a></li><li><a href="https://www.quora.com/What-are-the-names-of-fire-hydrant-parts" target="_blank" rel="noopener noreferrer">quora.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-16">
+      <div class="stop-head">
+        <span class="stop-num">16</span>
+        <h2>Brooklyn Edison Company Vault</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/16-edison-vault.jpg"><img src="images/16-edison-vault.jpg" alt="Brooklyn Edison Company Vault" loading="lazy"></a></div>
+      <p>Small electrical vaults like this one house transformers and junction points for conduits. Keep an eye out for red pavement markings showing conduit paths branching out from these boxes toward lampposts and buildings. Many of the vault covers are original and still read "B E Co," short for Brooklyn Edison Company, the original electrical utility in Brooklyn. It would later merge with others to become Consolidated Edison (Con Edison).</p>
+      <blockquote><p>In the latter part of the 1880s, the Edison Electric Illuminating Company (EEICo.) branched out into Brooklyn. The First District powerhouse, ironically, was located on Pearl and Adams Streets in downtown Brooklyn, near the Brooklyn and Manhattan Bridges (see Figures 10 and 11).</p><p>EEICo. Brooklyn was a holding of Kings County Electric Light and Power Company (KCEL&amp;PCo.), which became a Brady/Murray holding and was reorganized as Brooklyn Edison Company (BECo.) in 1919. BECo. did not become part of the Consolidated group until 1943, at which time it was acquired by Con Edison.</p></blockquote>
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.nycurbanism.com/photography/brooklyn-edison-company-building" target="_blank" rel="noopener noreferrer">nycurbanism.com</a></li><li><a href="https://magazine.ieee-pes.org/mayjune-2012/history-2/" target="_blank" rel="noopener noreferrer">magazine.ieee-pes.org</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-17">
+      <div class="stop-head">
+        <span class="stop-num">17</span>
+        <h2>Hydrant With Security Nut</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/17-hydrant-nut.jpg"><img src="images/17-hydrant-nut.jpg" alt="Hydrant With Security Nut" loading="lazy"></a></div>
+      <p>Some fire hydrants have a security nut in place of the standard pentagon bolt, which needs a special wrench to operate the valve and let water flow. That wrench has precisely placed magnets that engage a mechanism hidden inside the security nut, so an ordinary wrench just spins uselessly against it.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://twitter.com/jasongay/status/767367163770437633/photo/1" target="_blank" rel="noopener noreferrer">twitter.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-18">
+      <div class="stop-head">
+        <span class="stop-num">18</span>
+        <h2>Traffic Control Box</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/18-traffic-box.jpg"><img src="images/18-traffic-box.jpg" alt="Traffic Control Box" loading="lazy"></a></div>
+      <p>Every intersection with traffic lights and pedestrian signals has a green box mounted on one of its poles. Inside is fairly sophisticated computer equipment that controls the signal timing sequences. If you spot a plastic dome on top of the box, that's for wireless communication.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://www.generaltrafficequip.com/peek-traffic-products" target="_blank" rel="noopener noreferrer">generaltrafficequip.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-19">
+      <div class="stop-head">
+        <span class="stop-num">19</span>
+        <h2>CATV Vault</h2>
+      </div>
+      <div class="gallery"><a class="lightbox-trigger" href="images/19-catv-vault-2-1.jpg"><img src="images/19-catv-vault-2-1.jpg" alt="CATV Vault" loading="lazy"></a><a class="lightbox-trigger" href="images/19-catv-vault-2-2.jpg"><img src="images/19-catv-vault-2-2.jpg" alt="CATV Vault" loading="lazy"></a></div>
+      <p>Cable TV infrastructure is usually buried below ground, but every so often you'll come across an above-ground vault like this one housing the equipment instead.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="http://cityinfrastructure.com/single.php?t=Cable%20TV&amp;d=CableTV" target="_blank" rel="noopener noreferrer">cityinfrastructure.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-20">
+      <div class="stop-head">
+        <span class="stop-num">20</span>
+        <h2>Fire Sprinkler Alarm Bell</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/20-sprinkler-bell.jpg"><img src="images/20-sprinkler-bell.jpg" alt="Fire Sprinkler Alarm Bell" loading="lazy"></a></div>
+      <p>Fire sprinklers activate when high heat melts away a small piece of metal in the sprinkler head, releasing pressurized water. These systems include sensors that detect when water starts flowing and trigger an alarm, usually an electric bell mounted outside the building. Older systems instead use a "water motor gong," which rings a bell using the force of the flowing water itself, no electricity required.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://blog.qrfs.com/75-fire-sprinkler-systems-history-types-and-uses/" target="_blank" rel="noopener noreferrer">blog.qrfs.com</a></li></ul></div>
+    </section>
+    <section class="stop" id="stop-21">
+      <div class="stop-head">
+        <span class="stop-num">21</span>
+        <h2>Multiple CATV Wires Emerge from the Sidewalk</h2>
+      </div>
+      <p class="no-photo">No photo in the original field notes.</p>
+      <p>In this spot, you can see orange pavement markings and follow them to the edge of a building, where they emerge and continue up the side of the wall. Along the way, several junction boxes split the larger cable into the coaxial cables you'd recognize, feeding service into individual apartment units.</p>
+      
+      
+    </section>
+    <section class="stop" id="stop-22">
+      <div class="stop-head">
+        <span class="stop-num">22</span>
+        <h2>Cablevision Surface Boxes</h2>
+      </div>
+      <p class="no-photo">No photo in the original field notes.</p>
+      <p>These boxes are labeled Cablevision, a provider that served this area before Spectrum. They house CATV equipment, and often a good number of batteries for backup power.</p>
+      
+      
+    </section>
+    <section class="stop" id="stop-23">
+      <div class="stop-head">
+        <span class="stop-num">23</span>
+        <h2>Follow Orange Paint, Cables Emerge!</h2>
+      </div>
+      <p class="no-photo">No photo in the original field notes.</p>
+      <p>As before, you can follow the orange utility markings to the spot where the cables emerge from the sidewalk and run up the side of a building.</p>
+      
+      
+    </section>
+    <section class="stop" id="stop-24">
+      <div class="stop-head">
+        <span class="stop-num">24</span>
+        <h2>Building Cable Hoist</h2>
+      </div>
+      <p class="no-photo">No photo in the original field notes.</p>
+      <p>When Verizon wants to bring service to a multifamily building, it will often run fiber optic cable in a vertical line up the outside of the building, serving a whole stack of units with a single run. A cable hoist gets installed at the top of that run first, rigged with a pulley and a canvas strap reaching down to the bottom. Later, a bundle of fiber optic cable pre-assembled for that specific set of units is hoisted into place using this setup, and the canvas strap is discarded once the job is done.</p>
+      
+      
+    </section>
+    <section class="stop" id="stop-25">
+      <div class="stop-head">
+        <span class="stop-num">25</span>
+        <h2>LinkNYC Fiber Run</h2>
+      </div>
+      <p class="no-photo">No photo in the original field notes.</p>
+      <p>LinkNYC kiosks were installed starting in the mid-2010s, each one hard-wired with fiber optics. You can often spot remnants of the installation path, where small channels were cut into the roadway to accommodate a conduit, frequently running to a nearby telecom manhole. Keep an eye out for orange paint markings and pavement cuts to trace where a given kiosk gets its data feed from.</p>
+      
+      
+    </section>
+    <section class="stop" id="stop-26">
+      <div class="stop-head">
+        <span class="stop-num">26</span>
+        <h2>New Building SD-1</h2>
+      </div>
+      <div class="gallery single"><a class="lightbox-trigger" href="images/26-new-building-sd1.jpg"><img src="images/26-new-building-sd1.jpg" alt="New Building SD-1" loading="lazy"></a></div>
+      <p>This is an SD-1 diagram, required for any new building that wants to connect to the city sewer. You can find these on the DOB website, and they're full of interesting detail about what's underground near a building &mdash; sewer diameter, vault locations, and other nearby utilities. They also document the building's own drainage systems: detention tanks, green roofs, and other infrastructure related to stormwater.</p>
+      
+      <div class="sources-block"><h4>Sources</h4><ul class="sources"><li><a href="https://a810-bisweb.nyc.gov/bisweb/BScanJobDocumentServlet?requestid=4&amp;passjobnumber=320626916&amp;passdocnumber=14&amp;allbin=3418187&amp;scancode=ES866405763" target="_blank" rel="noopener noreferrer">a810-bisweb.nyc.gov</a></li></ul></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Compiled by Chris Whong on a walk down Vanderbilt Avenue, 17 July 2022. Photos are the author's own except where a source link is given; all other images and quoted text belong to their original publishers, linked above each item.</p>
+  </footer>
+</div>
+
+<a href="#top" class="top-link" id="topLink" aria-label="Back to top">&uarr;</a>
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script>
+(function () {
+  var topLink = document.getElementById('topLink');
+  window.addEventListener('scroll', function () {
+    topLink.classList.toggle('visible', window.scrollY > 600);
+  }, { passive: true });
+
+  var stickyToc = document.getElementById('stickyToc');
+  var hero = document.querySelector('header.hero');
+  function toggleStickyToc() {
+    stickyToc.classList.toggle('visible', hero.getBoundingClientRect().bottom < 0);
+  }
+  window.addEventListener('scroll', toggleStickyToc, { passive: true });
+  toggleStickyToc();
+
+  var stickyBadges = {};
+  stickyToc.querySelectorAll('[data-anchor]').forEach(function (a) {
+    stickyBadges[a.getAttribute('data-anchor')] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var badge = stickyBadges[entry.target.id];
+        if (!badge) return;
+        stickyToc.querySelectorAll('.toc-badge.active').forEach(function (b) {
+          b.classList.remove('active');
+        });
+        badge.classList.add('active');
+        badge.scrollIntoView({ inline: 'center', block: 'nearest' });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    document.querySelectorAll('section.stop[id]').forEach(function (s) {
+      spy.observe(s);
+    });
+  }
+
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  document.querySelectorAll('.lightbox-trigger').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      lightboxImg.src = a.getAttribute('href');
+      lightboxImg.alt = a.querySelector('img').alt;
+      lightbox.classList.add('open');
+    });
+  });
+  lightbox.addEventListener('click', function () {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('open');
+      lightboxImg.src = '';
+    }
+  });
+})();
+</script>
+</body>
+</html>
